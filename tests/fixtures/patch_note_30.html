@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="">
+    <title data-suffix=" · Monsters &amp; Memories">
+      0.25.1.1 - Beta Patch 6 Hotfix 3
+     · Monsters &amp; Memories</title>
+    <link phx-track-static rel="stylesheet" href="/assets/app-0d5f457641718296efff5053305c7766.css?vsn=d">
+
+    <script defer phx-track-static type="text/javascript" src="/assets/app.js?v=2">
+    </script>
+  </head>
+  <body class="h-full bg-zinc-900 text-zinc-100">
+
+    <div id="timezone-detector" phx-hook="TimezoneDetector" data-timezone="UTC" class="hidden">
+    </div>
+
+
+      <div class="min-h-full">
+        <nav id="site-navbar" class="sticky top-0 z-40 border-b-2 border-zinc-700 bg-zinc-800/80 backdrop-blur-sm">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 justify-between">
+              <div class="flex">
+                <div class="flex shrink-0 items-center">
+                  <a href="/" class="text-xl font-bold text-orange-500 hover:text-orange-400 transition-colors duration-200">
+                    Monsters & Memories
+                  </a>
+
+                </div>
+                <div class="hidden md:-my-px md:ml-6 md:flex md:space-x-8">
+                  <a href="/community" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-zinc-400 hover:border-zinc-600 hover:text-zinc-300 transition-colors duration-200">
+                    Community
+                  </a>
+                  
+                  <a href="/launcher" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-zinc-400 hover:border-zinc-600 hover:text-zinc-300 transition-colors duration-200">
+                    Download Launcher
+                  </a>
+                  
+                </div>
+              </div>
+
+                <div class="hidden gap-3 md:flex md:items-center">
+                  <a href="/accounts/register" id="navbar-register-link" class="game-button game-button-compact">
+                    Register
+                  </a>
+                  <a href="/accounts/log_in" id="navbar-login-link" class="game-button game-button-compact">
+                    Log in
+                  </a>
+                </div>
+
+
+              <div class="-mr-2 flex items-center md:hidden">
+                <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-zinc-800 p-2 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-zinc-800" aria-controls="mobile-menu" phx-click="[[&quot;toggle&quot;,{&quot;to&quot;:&quot;#mobile-menu&quot;}],[&quot;toggle_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;to&quot;:&quot;body&quot;}]]" aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:hidden hidden max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain" id="mobile-menu">
+            <div class="space-y-1 pb-3 pt-2">
+
+              <a href="/community" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-zinc-400 hover:border-zinc-600 hover:bg-zinc-700 hover:text-zinc-300">
+                Community
+              </a>
+              
+              <a href="/launcher" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-zinc-400 hover:border-zinc-600 hover:bg-zinc-700 hover:text-zinc-300">
+                Download Launcher
+              </a>
+              
+
+                <div class="grid grid-cols-2 gap-3 px-3 pt-2">
+                  <a href="/accounts/register" id="mobile-navbar-register-link" class="game-button game-button-compact w-full">
+                    Register
+                  </a>
+                  <a href="/accounts/log_in" id="mobile-navbar-login-link" class="game-button game-button-compact w-full">
+                    Log in
+                  </a>
+                </div>
+
+            </div>
+
+          </div>
+        </nav>
+
+        <main>
+
+            <div id="phx-GNtWpKLTHOWoGaUh" data-phx-main data-phx-session="" data-phx-static=""><div id="flash-group">
+  
+  
+  <div id="client-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 shadow-lg border bg-zinc-800 border-red-700 text-red-200" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-client-error #client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    We can&#39;t find the internet
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Attempting to reconnect
+    <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+  </p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+
+  <div id="server-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 shadow-lg border bg-zinc-800 border-red-700 text-red-200" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-server-error #server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    Something went wrong!
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Hang in there while we get back on track
+    <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+  </p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+</div>
+
+  
+  <div class="px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="mb-6">
+        <a href="/community/patch_notes" data-phx-link="redirect" data-phx-link-state="push" class="game-button">
+          <span class="hero-chevron-left h-5 w-5 mr-1"></span> Back to Patch Notes
+        </a>
+      </div>
+
+      <div id="patch-note-content" class="paper-frame p-10 break-words">
+        <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-2">
+          0.25.1.1 - Beta Patch 6 Hotfix 3
+        </h1>
+        <p class="text-sm text-zinc-700 mb-6">
+          June 17, 2026
+        </p>
+
+        <div class="space-y-3">
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-2230" aria-expanded="true" aria-controls="patch-section-2230" phx-click="toggle_section" phx-value-id="2230" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Fixes
+                  </h2>
+                </button>
+
+                <div id="patch-section-2230" class="mt-4 space-y-2">
+                  <ul data-depth="1" class="list-disc list-inside space-y-1 pl-2 ml-8"><li class="text-zinc-800">Self damaging abilities were applying their damage twice. This has been fixed now.</li><li class="text-zinc-800">Consume now properly does not scale self-damage with Wisdom</li><li class="text-zinc-800">Lich will now properly damage you without being impacted by sitting or standing</li><li class="text-zinc-800">Druid:</li></ul><ul data-depth="2" class="list-disc list-inside space-y-1 pl-2 ml-16"><li class="text-zinc-800">Druid DoTs and DDs have now had their Winter Theme properly applied</li><li class="text-zinc-800">Wolf Pack is now only self targeted and will only affect your own group</li><li class="text-zinc-800">Spark healing line now has ability descriptions</li><li class="text-zinc-800">Frostbite no longer incorrectly says it can be stacked to 3 in its description</li><li class="text-zinc-800">Swarm of Mites has been corrected to be a level 8 spell</li><li class="text-zinc-800">Swarm of Mites and Summon: Cureberries scroll costs have been set to 1cp</li><li class="text-zinc-800">Summon: Cureberries and Cureberries item have had a temporary icon assigned (it looks like bread)</li></ul><ul data-depth="1" class="list-disc list-inside space-y-1 pl-2 ml-8"><li class="text-zinc-800">Archer:</li></ul><ul data-depth="2" class="list-disc list-inside space-y-1 pl-2 ml-16"><li class="text-zinc-800">Barbed Arrows damage properly set to match the 0.25.1.0 patch notes</li></ul>
+                </div>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+  </body>
+</html>

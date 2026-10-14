@@ -1,0 +1,43 @@
+[package]
+name = "rmnm"
+version = "0.1.0"
+edition = "2024"
+description = "Terminal launcher and patcher for Monsters & Memories"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.104"
+base64 = "0.22.1"
+crc-fast = "1.10.0"
+directories = "6.0.0"
+quick-xml = { version = "0.42.0", features = ["serialize"] }
+ratatui = "0.30.2"
+reqwest = { version = "0.13.5", default-features = false, features = ["blocking", "json", "rustls", "query", "gzip", "http2"] }
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+scraper = "0.27.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+xxhash-rust = { version = "0.8.19", features = ["xxh3"] }
+zstd = "0.14.0"
+
+[dev-dependencies]
+tempfile = "3.27.0"
+
+# Release builds are tuned for a small binary.
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+# Hashing and decompression run over the whole 8.7 GiB install during Patch and Repair,
+# so they stay fully optimized.
+[profile.release.package.xxhash-rust]
+opt-level = 3
+
+[profile.release.package.crc-fast]
+opt-level = 3
+
+[profile.release.package.zstd-sys]
+opt-level = 3

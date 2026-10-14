@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="">
+    <title data-suffix=" · Monsters &amp; Memories">
+      0.30.2.4 - Module 1 Patch 7
+     · Monsters &amp; Memories</title>
+    <link phx-track-static rel="stylesheet" href="/assets/app-0d5f457641718296efff5053305c7766.css?vsn=d">
+
+    <script defer phx-track-static type="text/javascript" src="/assets/app.js?v=2">
+    </script>
+  </head>
+  <body class="h-full bg-zinc-900 text-zinc-100">
+
+    <div id="timezone-detector" phx-hook="TimezoneDetector" data-timezone="UTC" class="hidden">
+    </div>
+
+
+      <div class="min-h-full">
+        <nav id="site-navbar" class="sticky top-0 z-40 border-b-2 border-zinc-700 bg-zinc-800/80 backdrop-blur-sm">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 justify-between">
+              <div class="flex">
+                <div class="flex shrink-0 items-center">
+                  <a href="/" class="text-xl font-bold text-orange-500 hover:text-orange-400 transition-colors duration-200">
+                    Monsters & Memories
+                  </a>
+
+                </div>
+                <div class="hidden md:-my-px md:ml-6 md:flex md:space-x-8">
+                  <a href="/community" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-zinc-400 hover:border-zinc-600 hover:text-zinc-300 transition-colors duration-200">
+                    Community
+                  </a>
+                  
+                  <a href="/launcher" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-zinc-400 hover:border-zinc-600 hover:text-zinc-300 transition-colors duration-200">
+                    Download Launcher
+                  </a>
+                  
+                </div>
+              </div>
+
+                <div class="hidden gap-3 md:flex md:items-center">
+                  <a href="/accounts/register" id="navbar-register-link" class="game-button game-button-compact">
+                    Register
+                  </a>
+                  <a href="/accounts/log_in" id="navbar-login-link" class="game-button game-button-compact">
+                    Log in
+                  </a>
+                </div>
+
+
+              <div class="-mr-2 flex items-center md:hidden">
+                <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-zinc-800 p-2 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-zinc-800" aria-controls="mobile-menu" phx-click="[[&quot;toggle&quot;,{&quot;to&quot;:&quot;#mobile-menu&quot;}],[&quot;toggle_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;to&quot;:&quot;body&quot;}]]" aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:hidden hidden max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain" id="mobile-menu">
+            <div class="space-y-1 pb-3 pt-2">
+
+              <a href="/community" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-zinc-400 hover:border-zinc-600 hover:bg-zinc-700 hover:text-zinc-300">
+                Community
+              </a>
+              
+              <a href="/launcher" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-zinc-400 hover:border-zinc-600 hover:bg-zinc-700 hover:text-zinc-300">
+                Download Launcher
+              </a>
+              
+
+                <div class="grid grid-cols-2 gap-3 px-3 pt-2">
+                  <a href="/accounts/register" id="mobile-navbar-register-link" class="game-button game-button-compact w-full">
+                    Register
+                  </a>
+                  <a href="/accounts/log_in" id="mobile-navbar-login-link" class="game-button game-button-compact w-full">
+                    Log in
+                  </a>
+                </div>
+
+            </div>
+
+          </div>
+        </nav>
+
+        <main>
+
+            <div id="phx-GNtUs7p_YZfP0tPD" data-phx-main data-phx-session="" data-phx-static=""><div id="flash-group">
+  
+  
+  <div id="client-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 shadow-lg border bg-zinc-800 border-red-700 text-red-200" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-client-error #client-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    We can&#39;t find the internet
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Attempting to reconnect
+    <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+  </p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+
+  <div id="server-error" phx-click="[[&quot;push&quot;,{&quot;value&quot;:{&quot;key&quot;:&quot;error&quot;},&quot;event&quot;:&quot;lv:clear-flash&quot;}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" role="alert" class="fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 shadow-lg border bg-zinc-800 border-red-700 text-red-200" hidden phx-connected="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-in&quot;,&quot;duration-200&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;]]}]]" phx-disconnected="[[&quot;show&quot;,{&quot;time&quot;:300,&quot;to&quot;:&quot;.phx-server-error #server-error&quot;,&quot;transition&quot;:[[&quot;transition-all&quot;,&quot;transform&quot;,&quot;ease-out&quot;,&quot;duration-300&quot;],[&quot;opacity-0&quot;,&quot;translate-y-4&quot;,&quot;sm:translate-y-0&quot;,&quot;sm:scale-95&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;,&quot;sm:scale-100&quot;]]}]]">
+  <p class="flex items-center gap-1.5 text-sm font-semibold leading-6">
+    
+    <span class="hero-exclamation-circle-mini h-4 w-4"></span>
+    Something went wrong!
+  </p>
+  <p class="mt-2 text-sm leading-5">
+    Hang in there while we get back on track
+    <span class="hero-arrow-path ml-1 h-3 w-3 animate-spin"></span>
+  </p>
+  <button type="button" class="group absolute top-1 right-1 p-2" aria-label="close">
+    <span class="hero-x-mark-solid h-5 w-5 opacity-40 group-hover:opacity-70"></span>
+  </button>
+</div>
+</div>
+
+  
+  <div class="px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="mb-6">
+        <a href="/community/patch_notes" data-phx-link="redirect" data-phx-link-state="push" class="game-button">
+          <span class="hero-chevron-left h-5 w-5 mr-1"></span> Back to Patch Notes
+        </a>
+      </div>
+
+      <div id="patch-note-content" class="paper-frame p-10 break-words">
+        <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-2">
+          0.30.2.4 - Module 1 Patch 7
+        </h1>
+        <p class="text-sm text-zinc-700 mb-6">
+          October 04, 2026
+        </p>
+
+        <div class="space-y-3">
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4020" aria-expanded="true" aria-controls="patch-section-4020" phx-click="toggle_section" phx-value-id="4020" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Fixes
+                  </h2>
+                </button>
+
+                <div id="patch-section-4020" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">Merchant sell button fix that prevents selling of items that are not intended to be sold (for 0 copper)</li><li class="text-zinc-800">Fixed a possible memory leak on the client</li><li class="text-zinc-800">Fix for zoning (especially in Night Harbor East/West and Underdocks) getting you stuck in loading screen</li><li class="text-zinc-800">Pet position update in Underdocks lifts and rafts</li><li class="text-zinc-800">Handing in items to an NPC that was recently in combat no longer bugs your character until you relog</li></ul>
+                </div>
+              </div>
+
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4026" aria-expanded="true" aria-controls="patch-section-4026" phx-click="toggle_section" phx-value-id="4026" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    UI
+                  </h2>
+                </button>
+
+                <div id="patch-section-4026" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">Fixed shadow settings not being persisted after relaunching</li><li class="text-zinc-800">Chat no longer wraps under scrollbar</li><li class="text-zinc-800">Chat fixes to long messages</li><li class="text-zinc-800">Guild invites now respect the ignore list</li></ul>
+                </div>
+              </div>
+
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4031" aria-expanded="true" aria-controls="patch-section-4031" phx-click="toggle_section" phx-value-id="4031" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Economy
+                  </h2>
+                </button>
+
+                <div id="patch-section-4031" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">The price of Deep Beetle Eyes has been adjusted upwards to be in line with the price of Fire Beetle Eyes</li></ul><ul data-depth="2" class="list-disc list-inside space-y-1 pl-2 ml-16"><li class="text-zinc-800">When we did the newbie area drop/cost adjustments, we took into consideration Deep Beetle Eye cost changes and had already adjusted up some prices and their drop rates</li><li class="text-zinc-800">We have also continued to monitor over the last 24 hours and our data shows that all 4 cities offer similar incomes per hour across the levels</li></ul><ul data-depth="3" class="list-disc list-inside space-y-1 pl-2 ml-24"><li class="text-zinc-800">Evershade Weald offers the most income, slightly ahead of Night Harbor and Underdocks</li><li class="text-zinc-800">Night Harbor and Underdocks are very close to each other</li><li class="text-zinc-800">Ail&#39;Vorith is a harder starting experience and Shadowless Deep Elves are exploited by the merchants in the foreign quarter</li><li class="text-zinc-800">Their income catches up after the starting experience</li></ul><ul data-depth="2" class="list-disc list-inside space-y-1 pl-2 ml-16"><li class="text-zinc-800">We are also continuing to monitor the cost of various items (including scrolls) against income</li></ul><ul data-depth="3" class="list-disc list-inside space-y-1 pl-2 ml-24"><li class="text-zinc-800">We are seeing that consistently:</li><li class="text-zinc-800">Characters that are forging ahead and leveling fast (and forgoing all other activities) end up being money constrained</li><li class="text-zinc-800">Tradeskills are expensive to get started on: characters that are focused on many tradeskills end up being money constrained</li><li class="text-zinc-800">Characters that engage in a variety of activities are generally able to afford their abilities and other costs (but are not in the leading edge level-wise)</li><li class="text-zinc-800">We will continue to monitor this and make adjustments</li></ul>
+                </div>
+              </div>
+
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4045" aria-expanded="true" aria-controls="patch-section-4045" phx-click="toggle_section" phx-value-id="4045" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Zone Lines
+                  </h2>
+                </button>
+
+                <div id="patch-section-4045" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">Night Harbor East/West Graveyard zone line has been adjusted to make it less surprising and less lethal</li><li class="text-zinc-800">One zone line that could have been exploited has been adjusted</li></ul>
+                </div>
+              </div>
+
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4049" aria-expanded="true" aria-controls="patch-section-4049" phx-click="toggle_section" phx-value-id="4049" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Underdocks
+                  </h2>
+                </button>
+
+                <div id="patch-section-4049" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">Added fishing volumes to Underdocks</li><li class="text-zinc-800">Added foraging tables to Underdocks</li></ul>
+                </div>
+              </div>
+
+
+
+
+              <div class="mt-4">
+                <button type="button" id="patch-section-toggle-4052" aria-expanded="true" aria-controls="patch-section-4052" phx-click="toggle_section" phx-value-id="4052" class="flex items-center gap-3 w-full min-h-11 text-left group/heading focus-visible:outline-2 focus-visible:outline-zinc-700 focus-visible:outline-offset-2">
+                  <span class="hero-chevron-right h-4 w-4 text-zinc-700 transition-transform flex-shrink-0 rotate-90"></span>
+                  <h2 class="text-xl font-semibold text-zinc-900 group-hover/heading:text-zinc-600 transition-colors">
+                    Ail&#39;Vorith
+                  </h2>
+                </button>
+
+                <div id="patch-section-4052" class="mt-4 space-y-2">
+                  <ul data-depth="0" class="list-disc list-inside space-y-1 pl-2"><li class="text-zinc-800">Fixed Myconid parts drop table (includes perfect stem drop rate fix)</li><li class="text-zinc-800">Fixed Spellblade and Wizard house quest prompt issue</li><li class="text-zinc-800">Fixed leashing for some city bridge guards</li></ul>
+                </div>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+        </main>
+      </div>
+
+
+  </body>
+</html>
